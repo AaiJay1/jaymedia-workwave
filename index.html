@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WorkWave - Earn Daily Online in Nigeria | ICON & TITAN Packages</title>
+
+  <meta name="description" content="Join WorkWave and start earning daily by completing simple online tasks in Nigeria. Choose from ICON or TITAN packages and get paid up to ₦15,000+ per day. Fast payouts. No referrals required.">
+  <meta name="keywords" content="payment, payment for workwave, register, register for work wave. earn online in Nigeria, is workwave legit, how to make money on workwave, how much to register on workwave, signup workwave, how to register on workwave, daily earning on workwave, is workwave legit, what is work wave, how to make money without referrals, legit paying updates 2025, seat at home jobs, remote jobs, no code jobs, paying non tech skills, daily income jobs, affiliate earnings Nigeria, WorkWave packages, legit online jobs, no referral earnings, daily payout, work wave withdrawal days, best package to register on work wave, ICON package, TITAN package">
+  <meta property="og:title" content="WorkWave – Daily Online Earnings in Nigeria">
+  <meta property="og:description" content="Earn up to ₦15,000+ daily completing simple tasks. Choose ICON or TITAN package. Fast withdrawals, no referrals needed.">
+  <meta property="og:url" content="https://workwave.com.ng">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://workwave.com.ng/assets/h1.jpg">
+  <meta name="theme-color" content="#6221A4">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+      line-height: 1.6;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background-image: radial-gradient(circle, #6221A4 10%, #250050 40%, #1A003D 80%);
+      animation: rotateBackground 20s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes rotateBackground {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    header {
+      background: #2E005E;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo img {
+      height: 50px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: #D6B1FD;
+    }
+
+    .hero button {
+      margin-top: 2rem;
+      background: linear-gradient(to right, #F85FD7, #FFC34E);
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #000;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .section {
+      padding: 4rem 1rem;
+      background-color: rgba(37, 0, 80, 0.85);
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .feature {
+      background: #3A0E68;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #FFD94D33;
+    }
+
+    .cta-section {
+      background: #6221A4;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .cta-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      margin-bottom: 2rem;
+      color: #D6B1FD;
+    }
+
+    .cta-section a,
+    .register-button {
+      background: linear-gradient(to right, #F85FD7, #FFC34E);
+      color: #000;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .testimonial {
+      background: #3A0E68;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #FFD94D22;
+      min-width: 280px;
+      max-width: 600px;
+      margin: 0 1rem;
+    }
+
+    .testimonial-wrapper {
+      position: relative;
+      overflow: hidden;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    #testimonial-rotator {
+      display: flex;
+      transition: transform 0.6s ease;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #FFD94D;
+      border: none;
+      color: #000;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .carousel-btn:hover {
+      filter: brightness(0.9);
+    }
+
+    .prev-btn { left: 0; }
+    .next-btn { right: 0; }
+
+    @media(max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 0.95rem; }
+      .section h2, .cta-section h3 { font-size: 1.5rem; }
+      nav a { display: block; margin: 0.5rem 0; }
+      header { flex-direction: column; align-items: flex-start; }
+    }
+
+    footer {
+      background: #1A003D;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #A88DCB;
+      margin-top: auto;
+    }
+
+    .footer-cta {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-cta p {
+      font-size: 0.85rem;
+      color: #FFD94D;
+      margin-bottom: 0.5rem;
+      font-style: italic;
+    }
+
+    .footer-cta a {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFD94D;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .footer-cta a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    /* ✅ Floating CTA Button for non-Nigerian users */
+    .floating-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(to right, #FFD94D, #F85FD7);
+      color: #000;
+      padding: 12px 18px 12px 14px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      z-index: 1000;
+      box-shadow: 0 0 15px rgba(248, 95, 215, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .floating-cta:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #F85FD7, #FFD94D);
+      color: #000;
+    }
+
+    .wa-icon {
+      width: 18px;
+      height: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="/assets/logo.png" alt="WorkWave Logo" />
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Your Daily Earnings, Made Easy</h1>
+    <p>Choose a plan, complete tasks, and earn daily. No referral stress, just results.</p>
+    <button onclick="location.href='/signup'">Get Started</button>
+    <img src="/assets/h1.jpg" alt="Work online and earn in Nigeria" style="margin-top:2rem;max-width:90%;border-radius:12px" />
+  </section>
+
+  <section class="section" id="how-it-works">
+    <h2>WorkWave Packages</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>TITAN PLAN – ₦20,000</h3>
+        <ul style="text-align:left">
+          <li>🎉 Welcome Bonus: ₦20,000</li>
+          <li>🤖 AI Automation: ₦5,000</li>
+          <li>📅 Daily Bonus Claim: ₦5,000</li>
+          <li>🧠 NFT Mint Task: ₦2,000</li>
+          <li>📸 Snap & Earn: ₦3,000</li>
+          <li>🎓 Guildline Bonus: ₦17,000</li>
+          <li>🛠️ Auto Guildline: ₦500</li>
+        </ul>
+        <p><strong>Earn ₦15,000 Daily</strong></p>
+      </div>
+      <div class="feature">
+        <h3>ICON PLAN – ₦10,000</h3>
+        <ul style="text-align:left">
+          <li>🎉 Welcome Bonus: ₦9,000</li>
+          <li>🤖 AI Automation: ₦1,000</li>
+          <li>📅 Daily Bonus Claim: ₦1,000</li>
+          <li>🧠 NFT Mint Task: ₦1,000</li>
+          <li>📸 Snap & Earn: ₦2,000</li>
+          <li>🎓 Guildline Bonus: ₦9,000</li>
+          <li>🛠️ Auto Guildline: ₦100</li>
+        </ul>
+        <p><strong>Earn ₦5,000 Daily</strong></p>
+      </div>
+    </div>
+    <a href="/signup" class="register-button">Register Now</a>
+  </section>
+
+  <section class="section">
+    <h2>Why Choose WorkWave?</h2>
+    <div class="features">
+      <div class="feature"><h3>Simple Tasks, Big Value</h3><p>Talk with lonely expats, influence with your social media, make foreign friends — and get paid.</p><img src="/assets/s.jpg" alt="Simple online jobs"></div>
+      <div class="feature"><h3>Fast, Daily Withdrawals</h3><p>Hit ₦20k and cash out. No withdrawal days. Just money, daily.</p><img src="/assets/daily.jpg" alt="Withdraw earnings fast"></div>
+      <div class="feature"><h3>Many Ways to Earn</h3><p>From chatting to content creation, NFT minting to AI tools — explore and earn with ease.</p><img src="/assets/cta.jpg" alt="Multiple streams"></div>
+    </div>
+    <a href="/signup" class="register-button">Register Now</a>
+  </section>
+
+  <section class="cta-section" id="register">
+    <h3>Ready to Earn Daily?</h3>
+    <p>Select a plan, do your task, and earn. It’s that simple. It’s WorkWave.</p>
+    <a href="/signup">Register Now</a>
+  </section>
+
+  <footer>
+    &copy; 2025 WorkWave. All rights reserved.
+    <div class="footer-cta">
+      <p>Do you want a site like this?</p>
+      <a href="https://wa.me/2348135137369?text=Hi%2C%20I%27m%20interested%20in%20building%20a%20website%20like%20this.%20Let%27s%20talk." target="_blank" rel="noopener">
+        Click here Let's talk!
+      </a>
+    </div>
+  </footer>
+
+  <!-- ✅ Floating CTA Button for Non-Nigerian Users -->
+  <a href="https://wa.me/2349160189006?text=Hi%2C%20I%27m%20not%20based%20in%20Nigeria%2C%20please%20send%20me%20payment%20details%20to%20activate%20my%20account." 
+     class="floating-cta" 
+     target="_blank" 
+     rel="noopener">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-icon">
+    Not in Nigeria? Pay via Admin
+  </a>
+
+  <script>
+    if (window.location.hostname === "www.workwave.com.ng") {
+    window.location.href = "https://workwave.com.ng" + window.location.pathname;
+  }
+
+    const track = document.getElementById('testimonial-rotator');
+    const slides = Array.from(track.children);
+    let index = 0;
+
+    function updateCarousel() {
+      const slideWidth = slides[0].getBoundingClientRect().width + 32;
+      track.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
+
+    function moveSlide(dir) {
+      index = (index + dir + slides.length) % slides.length;
+      updateCarousel();
+      resetTimer();
+    }
+
+    let timer = setInterval(() => moveSlide(1), 7000);
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(() => moveSlide(1), 7000);
+    }
+
+    window.addEventListener('resize', updateCarousel);
+  </script>
+
+</body>
+</html>
