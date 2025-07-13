@@ -272,6 +272,23 @@
   opacity: 0.8;
 }
 
+.dev-credit-subtle a {
+      color: #f9c92d;
+      text-decoration: none;
+      font-weight: 1000;
+    }
+
+    .dev-credit-subtle a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 480px) {
+      .dev-credit-subtle {
+        font-size: 0.95rem;
+        padding: 3px 6px;
+      }
+    }
+
 
     footer {
       background: #1A003D;
@@ -281,36 +298,6 @@
       color: #A88DCB;
       margin-top: auto;
     }
-
-    .footer-cta {
-      margin-top: 1.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .footer-cta p {
-      font-size: 0.85rem;
-      color: #FFD94D;
-      margin-bottom: 0.5rem;
-      font-style: italic;
-    }
-
-    .footer-cta a {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.08);
-      color: #FFD94D;
-      padding: 0.5rem 1.2rem;
-      border-radius: 6px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .footer-cta a:hover {
-      background: rgba(255, 255, 255, 0.15);
-      color: #fff;
-    }
-
     /* ✅ Floating CTA Button for non-Nigerian users */
     .floating-cta {
       position:fixed;
@@ -428,15 +415,11 @@
   </div>
 </section>
 
-
+<div class="dev-credit-subtle" style="position: fixed; bottom: 22px; left: 10px; background: rgba(255, 255, 255, 0.06); color: #bbb; padding: 4px 8px; font-size: 0.72rem; border-radius: 6px; z-index: 998; font-family: 'Inter', sans-serif;">
+  Built by <strong style="color:#FFD94D;">Nexa Tech Solutions</strong>. <a href="https://wa.me/2348135137369?text=Hi%2C%20I%27m%20interested%20in%20getting%20a%20website%20like%20this.%20Let%27s%20talk." target="_blank" style="color: #f9c92d; text-decoration: none;">Click here to reach us</a>
+</div>
   <footer>
     &copy; 2025 WorkWave. All rights reserved.
-    <div class="footer-cta">
-      <p>Do you want a site like this?</p>
-      <a href="https://wa.me/2348135137369?text=Hi%2C%20I%27m%20interested%20in%20building%20a%20website%20like%20this.%20Let%27s%20talk." target="_blank" rel="noopener">
-        Click here Let's talk!
-      </a>
-    </div>
   </footer>
 
   <!-- ✅ Floating CTA Button for Non-Nigerian Users -->
