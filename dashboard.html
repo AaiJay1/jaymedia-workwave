@@ -1,4 +1,10 @@
-
+<script>
+  const canAccess = localStorage.getItem('accessDashboard');
+  if (!canAccess || canAccess !== 'true') {
+    // Block access if user didn’t come from signup
+    window.location.href = '/';
+  }
+</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -100,6 +106,23 @@
       font-size: 0.85rem;
       color: #A88DCB;
     }
+
+    .dev-credit-subtle a {
+      color: #f9c92d;
+      text-decoration: none;
+      font-weight: 1000;
+    }
+
+    .dev-credit-subtle a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 480px) {
+      .dev-credit-subtle {
+        font-size: 0.95rem;
+        padding: 3px 6px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -125,6 +148,10 @@
       <div class="testimonial-slide"><strong>Kenny – Ibadan</strong><br>“No referrals. Just task and cash. Straightforward!”</div>
       <div class="testimonial-slide"><strong>Linda – PH</strong><br>“The TITAN plan gave me everything I needed. Instant payout!”</div>
     </div>
+
+    <div class="dev-credit-subtle" style="position: fixed; bottom: 22px; left: 10px; background: rgba(255, 255, 255, 0.06); color: #bbb; padding: 4px 8px; font-size: 0.72rem; border-radius: 6px; z-index: 998; font-family: 'Inter', sans-serif;">
+  Built by <strong style="color:#FFD94D;">Nexa Tech Solutions</strong>. <a href="https://wa.me/2348135137369?text=Hi%2C%20I%27m%20interested%20in%20getting%20a%20website%20like%20this.%20Let%27s%20talk." target="_blank" style="color: #f9c92d; text-decoration: none;">Click here to reach us</a>
+</div>
 
     <footer>&copy; 2025 WorkWave. All rights reserved.</footer>
   </div>
