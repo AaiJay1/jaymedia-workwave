@@ -1,7 +1,8 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/signup", "destination": "/signup.html" },
-    { "source": "/payment", "destination": "/payment.html" }
+    { "source": "/register", "destination": "/signup.html" },
+    { "source": "/payment", "destination": "/payment.html" },
+    { "source": "/dashboard", "destination": "/dashboard.html" }
   ]
 }
