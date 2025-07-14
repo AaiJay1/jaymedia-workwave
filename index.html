@@ -367,6 +367,28 @@
   background: #FFC34E;
 }
 
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.features-grid .feature {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: #3A0E68;;
+  text-align: center;
+}
+
+.features-grid .feature img {
+  max-width: 100%;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+</style>
+
+
   </style>
 </head>
 <body>
@@ -435,29 +457,28 @@
 <!-- WHY CHOOSE WORKWAVE SECTION -->
 <section class="section" id="why-workwave">
   <h2 data-key="sectionTitle">Why Choose WorkWave?</h2>
-  <div class="features">
-    <div class="translatable" data-key="sectionDesc">
-      <div class="feature">
-        <h3>Simple Tasks, Big Value</h3>
-        <p>Talk with lonely expats, influence with your social media, make foreign friends — and get paid.</p>
-        <img src="/assets/s.jpg" alt="Simple online jobs">
-      </div>
-      <div class="feature">
-        <h3>Fast, Daily Withdrawals</h3>
-        <p>Hit ₦20k and cash out. No withdrawal days. Just money, daily.</p>
-        <img src="/assets/daily.jpg" alt="Withdraw earnings fast">
-      </div>
-      <div class="feature">
-        <h3>Many Ways to Earn</h3>
-        <p>From chatting to content creation, NFT minting to AI tools — explore and earn with ease.</p>
-        <img src="/assets/cta.jpg" alt="Multiple streams">
-      </div>
+  <div class="features-grid translatable" data-key="sectionDesc">
+    <div class="feature">
+      <h3>Simple Tasks, Big Value</h3>
+      <p>Talk with lonely expats, influence with your social media, make foreign friends — and get paid.</p>
+      <img src="/assets/s.jpg" alt="Simple online jobs">
+    </div>
+    <div class="feature">
+      <h3>Fast, Daily Withdrawals</h3>
+      <p>Hit ₦20k and cash out. No withdrawal days. Just money, daily.</p>
+      <img src="/assets/daily.jpg" alt="Withdraw earnings fast">
+    </div>
+    <div class="feature">
+      <h3>Many Ways to Earn</h3>
+      <p>From chatting to content creation, NFT minting to AI tools — explore and earn with ease.</p>
+      <img src="/assets/cta.jpg" alt="Multiple streams">
     </div>
   </div>
   <div style="text-align:center; margin-top: 2rem;">
     <a href="/signup" class="register-button" data-key="pricingText.registerButton">Register Now</a>
   </div>
 </section>
+
 
 <!-- CTA SECTION -->
 <section class="cta-section" id="register">
