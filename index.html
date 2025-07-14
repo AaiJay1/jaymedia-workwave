@@ -98,6 +98,22 @@
       to { transform: rotate(360deg); }
     }
 
+    .language-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
+    }
+    .language-toggle select {
+      padding: 4px 8px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-family: 'Inter', sans-serif;
+    }
+    .hero { text-align: center; padding: 2rem; }
+    .section { padding: 2rem; text-align: center; }
+    .translated { display: none; }
+
     header {
       background: #2E005E;
       padding: 1rem 2rem;
@@ -146,6 +162,7 @@
       cursor: pointer;
     }
 
+    
     img {
       max-width: 100%;
       height: auto;
@@ -205,6 +222,7 @@
       margin-top: 1rem;
     }
 
+    
     .testimonial {
       background: #3A0E68;
       padding: 2rem;
@@ -328,6 +346,27 @@
       width: 18px;
       height: 18px;
     }
+
+    .scroll-top {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: #FFD94D;
+  color: #000;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  z-index: 998;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-top:hover {
+  background: #FFC34E;
+}
+
   </style>
 </head>
 <body>
@@ -338,61 +377,95 @@
     </div>
   </header>
 
-  <section class="hero">
+  <!-- LANGUAGE SWITCHER -->
+<div style="margin-top: 2rem; text-align: center;">
+  <button class="lang-btn active" onclick="setLanguage('en', this)">English</button>
+  <button class="lang-btn" onclick="setLanguage('ha', this)">Hausa</button>
+  <button class="lang-btn" onclick="setLanguage('ig', this)">Igbo</button>
+  <button class="lang-btn" onclick="setLanguage('yo', this)">Yoruba</button>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="translatable" data-key="headline">
     <h1>Your Daily Earnings, Made Easy</h1>
+  </div>
+  <div class="translatable" data-key="tagline">
     <p>Choose a plan, complete tasks, and earn daily. No referral stress, just results.</p>
-    <button onclick="location.href='/signup'">Get Started</button>
-    <img src="/assets/h1.jpg" alt="Work online and earn in Nigeria" style="margin-top:2rem;max-width:90%;border-radius:12px" />
-  </section>
+  </div>
+  <button onclick="location.href='/signup'">Get Started</button>
+  <img src="/assets/h1.jpg" alt="Work online and earn in Nigeria" style="margin-top:2rem;max-width:90%;border-radius:12px" />
+</section>
 
-  <section class="section" id="how-it-works">
-    <h2>WorkWave Packages</h2>
-    <div class="features">
+<!-- HOW IT WORKS / PRICING SECTION -->
+<section class="section" id="how-it-works">
+  <h2 data-key="pricingText.sectionTitle">WorkWave Packages</h2>
+  <div class="features">
+    <div class="feature">
+      <h3 data-key="pricingText.titanPlan">TITAN PLAN – ₦20,000</h3>
+      <ul style="text-align:left">
+        <li data-key="pricingText.titanWelcomeBonus">🎉 Welcome Bonus: ₦20,000</li>
+        <li data-key="pricingText.titanAiAutomation">🤖 AI Automation: ₦5,000</li>
+        <li data-key="pricingText.titanDailyBonus">📅 Daily Bonus Claim: ₦5,000</li>
+        <li data-key="pricingText.titanNftTask">🧠 NFT Mint Task: ₦2,000</li>
+        <li data-key="pricingText.titanSnapEarn">📸 Snap & Earn: ₦3,000</li>
+        <li data-key="pricingText.titanGuidelineBonus">🎓 Guildline Bonus: ₦17,000</li>
+        <li data-key="pricingText.titanAutoGuideline">🛠️ Auto Guildline: ₦500</li>
+      </ul>
+      <p><strong data-key="pricingText.dailyEarningTitan">Earn ₦15,000 Daily</strong></p>
+    </div>
+
+    <div class="feature">
+      <h3 data-key="pricingText.iconPlan">ICON PLAN – ₦10,000</h3>
+      <ul style="text-align:left">
+        <li data-key="pricingText.iconWelcomeBonus">🎉 Welcome Bonus: ₦9,000</li>
+        <li data-key="pricingText.iconAiAutomation">🤖 AI Automation: ₦1,000</li>
+        <li data-key="pricingText.iconDailyBonus">📅 Daily Bonus Claim: ₦1,000</li>
+        <li data-key="pricingText.iconNftTask">🧠 NFT Mint Task: ₦1,000</li>
+        <li data-key="pricingText.iconSnapEarn">📸 Snap & Earn: ₦2,000</li>
+        <li data-key="pricingText.iconGuidelineBonus">🎓 Guildline Bonus: ₦9,000</li>
+        <li data-key="pricingText.iconAutoGuideline">🛠️ Auto Guildline: ₦100</li>
+      </ul>
+      <p><strong data-key="pricingText.dailyEarningIcon">Earn ₦5,000 Daily</strong></p>
+    </div>
+  </div>
+  <a href="/signup" class="register-button" data-key="pricingText.registerButton">Register Now</a>
+</section>
+
+<!-- WHY CHOOSE WORKWAVE SECTION -->
+<section class="section" id="why-workwave">
+  <h2 data-key="sectionTitle">Why Choose WorkWave?</h2>
+  <div class="features">
+    <div class="translatable" data-key="sectionDesc">
       <div class="feature">
-        <h3>TITAN PLAN – ₦20,000</h3>
-        <ul style="text-align:left">
-          <li>🎉 Welcome Bonus: ₦20,000</li>
-          <li>🤖 AI Automation: ₦5,000</li>
-          <li>📅 Daily Bonus Claim: ₦5,000</li>
-          <li>🧠 NFT Mint Task: ₦2,000</li>
-          <li>📸 Snap & Earn: ₦3,000</li>
-          <li>🎓 Guildline Bonus: ₦17,000</li>
-          <li>🛠️ Auto Guildline: ₦500</li>
-        </ul>
-        <p><strong>Earn ₦15,000 Daily</strong></p>
+        <h3>Simple Tasks, Big Value</h3>
+        <p>Talk with lonely expats, influence with your social media, make foreign friends — and get paid.</p>
+        <img src="/assets/s.jpg" alt="Simple online jobs">
       </div>
       <div class="feature">
-        <h3>ICON PLAN – ₦10,000</h3>
-        <ul style="text-align:left">
-          <li>🎉 Welcome Bonus: ₦9,000</li>
-          <li>🤖 AI Automation: ₦1,000</li>
-          <li>📅 Daily Bonus Claim: ₦1,000</li>
-          <li>🧠 NFT Mint Task: ₦1,000</li>
-          <li>📸 Snap & Earn: ₦2,000</li>
-          <li>🎓 Guildline Bonus: ₦9,000</li>
-          <li>🛠️ Auto Guildline: ₦100</li>
-        </ul>
-        <p><strong>Earn ₦5,000 Daily</strong></p>
+        <h3>Fast, Daily Withdrawals</h3>
+        <p>Hit ₦20k and cash out. No withdrawal days. Just money, daily.</p>
+        <img src="/assets/daily.jpg" alt="Withdraw earnings fast">
+      </div>
+      <div class="feature">
+        <h3>Many Ways to Earn</h3>
+        <p>From chatting to content creation, NFT minting to AI tools — explore and earn with ease.</p>
+        <img src="/assets/cta.jpg" alt="Multiple streams">
       </div>
     </div>
-    <a href="/signup" class="register-button">Register Now</a>
-  </section>
+  </div>
+  <div style="text-align:center; margin-top: 2rem;">
+    <a href="/signup" class="register-button" data-key="pricingText.registerButton">Register Now</a>
+  </div>
+</section>
 
-  <section class="section">
-    <h2>Why Choose WorkWave?</h2>
-    <div class="features">
-      <div class="feature"><h3>Simple Tasks, Big Value</h3><p>Talk with lonely expats, influence with your social media, make foreign friends — and get paid.</p><img src="/assets/s.jpg" alt="Simple online jobs"></div>
-      <div class="feature"><h3>Fast, Daily Withdrawals</h3><p>Hit ₦20k and cash out. No withdrawal days. Just money, daily.</p><img src="/assets/daily.jpg" alt="Withdraw earnings fast"></div>
-      <div class="feature"><h3>Many Ways to Earn</h3><p>From chatting to content creation, NFT minting to AI tools — explore and earn with ease.</p><img src="/assets/cta.jpg" alt="Multiple streams"></div>
-    </div>
-    <a href="/signup" class="register-button">Register Now</a>
-  </section>
+<!-- CTA SECTION -->
+<section class="cta-section" id="register">
+  <h3>Ready to Earn Daily?</h3>
+  <p>Select a plan, do your task, and earn. It’s that simple. It’s WorkWave.</p>
+  <a href="/signup">Register Now</a>
+</section>
 
-  <section class="cta-section" id="register">
-    <h3>Ready to Earn Daily?</h3>
-    <p>Select a plan, do your task, and earn. It’s that simple. It’s WorkWave.</p>
-    <a href="/signup">Register Now</a>
-  </section>
 
   <section class="social-links">
   <p>Follow us on social media</p>
@@ -431,10 +504,22 @@
     Not in Nigeria? Pay via Admin
   </a>
 
+  <div class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</div>
+
   <script>
     if (window.location.hostname === "www.workwave.com.ng") {
     window.location.href = "https://workwave.com.ng" + window.location.pathname;
   }
+  
+  // Scroll button logic
+    window.addEventListener('scroll', function() {
+      const btn = document.getElementById('scrollTopBtn');
+      if (window.scrollY > 300) {
+        btn.style.display = 'block';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
 
     const track = document.getElementById('testimonial-rotator');
     const slides = Array.from(track.children);
@@ -458,6 +543,171 @@
     }
 
     window.addEventListener('resize', updateCarousel);
+  </script>
+
+  <script>
+    function setLanguage(lang, btn) {
+    // Switch translations
+    const elements = document.querySelectorAll("[data-key]");
+    elements.forEach(el => {
+      const key = el.getAttribute("data-key");
+      const keys = key.split(".");
+      let value = translations[lang];
+
+      keys.forEach(k => {
+        if (value && value[k]) value = value[k];
+      });
+
+      if (typeof value === "string") {
+        if (["H1", "H2", "H3", "P", "SPAN", "LI", "STRONG", "A"].includes(el.tagName)) {
+          el.textContent = value;
+        } else {
+          el.innerHTML = value;
+        }
+      }
+    });
+
+    // Update active button style
+    document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+  }
+  </script>
+
+  <script>
+    // Translations
+const translations = {
+  en: {
+    headline: "Your Daily Earnings, Made Easy",
+    tagline: "Choose a plan, complete tasks, and earn daily. No referral stress, just results.",
+    sectionTitle: "Why Choose WorkWave?",
+    sectionDesc: `
+      <div class="feature"><h3>Simple Tasks, Big Value</h3><p>Talk with lonely expats, influence with your social media, make foreign friends — and get paid.</p><img src="/assets/s.jpg" alt="Simple online jobs"></div>
+      <div class="feature"><h3>Fast, Daily Withdrawals</h3><p>Hit ₦20k and cash out. No withdrawal days. Just money, daily.</p><img src="/assets/daily.jpg" alt="Withdraw earnings fast"></div>
+      <div class="feature"><h3>Many Ways to Earn</h3><p>From chatting to content creation, NFT minting to AI tools — explore and earn with ease.</p><img src="/assets/cta.jpg" alt="Multiple streams"></div>
+    `,
+    pricingText: {
+      sectionTitle: "WorkWave Packages",
+      titanPlan: "TITAN PLAN – ₦20,000",
+      iconPlan: "ICON PLAN – ₦10,000",
+      titanWelcomeBonus: "🎉 Welcome Bonus: ₦20,000",
+      titanAiAutomation: "🤖 AI Automation: ₦5,000",
+      titanDailyBonus: "📅 Daily Bonus Claim: ₦5,000",
+      titanNftTask: "🧠 NFT Mint Task: ₦2,000",
+      titanSnapEarn: "📸 Snap & Earn: ₦3,000",
+      titanGuidelineBonus: "🎓 Guideline Bonus: ₦17,000",
+      titanAutoGuideline: "🛠️ Auto Guideline: ₦500",
+      iconWelcomeBonus: "🎉 Welcome Bonus: ₦9,000",
+      iconAiAutomation: "🤖 AI Automation: ₦1,000",
+      iconDailyBonus: "📅 Daily Bonus Claim: ₦1,000",
+      iconNftTask: "🧠 NFT Mint Task: ₦1,000",
+      iconSnapEarn: "📸 Snap & Earn: ₦2,000",
+      iconGuidelineBonus: "🎓 Guideline Bonus: ₦9,000",
+      iconAutoGuideline: "🛠️ Auto Guideline: ₦100",
+      dailyEarningTitan: "Earn ₦15,000 Daily",
+      dailyEarningIcon: "Earn ₦5,000 Daily",
+      registerButton: "Register Now"
+    }
+  },
+
+  ha: {
+    headline: "Samu Kuɗi Kullum Cikin Sauƙi",
+    tagline: "Zaɓi tsari, kammala ayyuka, kuma samu kuɗi kullum. Babu wahalar gayyata, kawai sakamako.",
+    sectionTitle: "Me Yasa Za Ka Zaɓi WorkWave?",
+    sectionDesc: `
+      <div class="feature"><h3>Ayyuka Masu Sauƙi, Babban Riba</h3><p>Yi magana da baƙi masu kaɗaici, ka yi amfani da kafafen sada zumunta, ka sami sabbin abokai — kuma a biya ka.</p><img src="/assets/s.jpg" alt="Ayyukan intanet masu sauƙi"></div>
+      <div class="feature"><h3>Cire Kuɗi Kullum Cikin Sauri</h3><p>Ka tara ₦20k ka cire. Babu ranar cire kuɗi takamaimai. Kawai kuɗi kullum.</p><img src="/assets/daily.jpg" alt="Cire kuɗi cikin sauri"></div>
+      <div class="feature"><h3>Hanyoyi da Dama Don Samun Kuɗi</h3><p>Daga hira zuwa ƙirƙirar abun ciki, NFT da kayan aikin AI — bincika ka ci riba.</p><img src="/assets/cta.jpg" alt="Hanyoyi daban-daban don samun kuɗi"></div>
+    `,
+    pricingText: {
+      sectionTitle: "Kunshin WorkWave",
+      titanPlan: "TSARI TITAN – ₦20,000",
+      iconPlan: "TSARI ICON – ₦10,000",
+      titanWelcomeBonus: "🎉 Kyautar Maraba: ₦20,000",
+      titanAiAutomation: "🤖 AI Mai Sarrafa Kai: ₦5,000",
+      titanDailyBonus: "📅 Kyautar Kullum: ₦5,000",
+      titanNftTask: "🧠 Aikin NFT Mint: ₦2,000",
+      titanSnapEarn: "📸 Dauki Hoto, Samu Kuɗi: ₦3,000",
+      titanGuidelineBonus: "🎓 Kyautar Jagora: ₦17,000",
+      titanAutoGuideline: "🛠️ Jagorar Kai Tsaye: ₦500",
+      iconWelcomeBonus: "🎉 Kyautar Maraba: ₦9,000",
+      iconAiAutomation: "🤖 AI Mai Sarrafa Kai: ₦1,000",
+      iconDailyBonus: "📅 Kyautar Kullum: ₦1,000",
+      iconNftTask: "🧠 Aikin NFT Mint: ₦1,000",
+      iconSnapEarn: "📸 Dauki Hoto, Samu Kuɗi: ₦2,000",
+      iconGuidelineBonus: "🎓 Kyautar Jagora: ₦9,000",
+      iconAutoGuideline: "🛠️ Jagorar Kai Tsaye: ₦100",
+      dailyEarningTitan: "Samu ₦15,000 Kullum",
+      dailyEarningIcon: "Samu ₦5,000 Kullum",
+      registerButton: "Yi Rijista Yanzu"
+    }
+  },
+
+  ig: {
+    headline: "Nweta Ego Gị kwa ụbọchị, Nwayọ Nwayọ",
+    tagline: "Họrọ atụmatụ, mee ọrụ, nata ego kwa ụbọchị. Enweghị mgbalị ntụnye, naanị nsonaazụ.",
+    sectionTitle: "Gịnị Mere Ị Ga Họrọ WorkWave?",
+    sectionDesc: `
+      <div class="feature"><h3>Ọrụ Dị Nfe, Ego Dị Elu</h3><p>Na soro ndị mba ọzọ kwurịta okwu, jiri mgbasa ozi gị mee ihe, chọta enyi ọhụrụ — wee nwetara ego.</p><img src="/assets/s.jpg" alt="Ọrụ dị mfe n’ịntanet"></div>
+      <div class="feature"><h3>Iwepụ Ego Kwa Ụbọchị</h3><p>Ruo ₦20k wee wepụ. Enweghị ụbọchị akwụkwụ. Ego kwa ụbọchị.</p><img src="/assets/daily.jpg" alt="Iwepụ ego ngwa ngwa"></div>
+      <div class="feature"><h3>Ụzọ Dị Iche Iji Nweta Ego</h3><p>Site na mkparịta ụka ruo n'ịmepụta ọdịnaya, NFT na ngwaọrụ AI — nyochaa ma nweta ego.</p><img src="/assets/cta.jpg" alt="Ọtụtụ ụzọ iji nweta ego"></div>
+    `,
+    pricingText: {
+      sectionTitle: "Ngwugwu WorkWave",
+      titanPlan: "ATỤMATSỊ TITAN – ₦20,000",
+      iconPlan: "ATỤMATSỊ ICON – ₦10,000",
+      titanWelcomeBonus: "🎉 Ego nnabata: ₦20,000",
+      titanAiAutomation: "🤖 Ngwaọrụ AI akpaghị aka: ₦5,000",
+      titanDailyBonus: "📅 Ego kwa ụbọchị: ₦5,000",
+      titanNftTask: "🧠 Ọrụ NFT Mint: ₦2,000",
+      titanSnapEarn: "📸 Were foto wee nweta ego: ₦3,000",
+      titanGuidelineBonus: "🎓 Ego ntụziaka: ₦17,000",
+      titanAutoGuideline: "🛠️ Ntụziaka akpaghị aka: ₦500",
+      iconWelcomeBonus: "🎉 Ego nnabata: ₦9,000",
+      iconAiAutomation: "🤖 Ngwaọrụ AI akpaghị aka: ₦1,000",
+      iconDailyBonus: "📅 Ego kwa ụbọchị: ₦1,000",
+      iconNftTask: "🧠 Ọrụ NFT Mint: ₦1,000",
+      iconSnapEarn: "📸 Were foto wee nweta ego: ₦2,000",
+      iconGuidelineBonus: "🎓 Ego ntụziaka: ₦9,000",
+      iconAutoGuideline: "🛠️ Ntụziaka akpaghị aka: ₦100",
+      dailyEarningTitan: "Nata ₦15,000 kwa ụbọchị",
+      dailyEarningIcon: "Nata ₦5,000 kwa ụbọchị",
+      registerButton: "Debanye Ugbu a"
+    }
+  },
+
+  yo: {
+    headline: "Èrè Ojoojúmọ́ Rẹ, Laisi Wahala",
+    tagline: "Yan eto kan, pari iṣẹ́, o si maa n gba owo lojoojumọ. Ko si wahala ìkó eniyan, abajade nikan.",
+    sectionTitle: "Kí Lẹ Fì Yàn WorkWave?",
+    sectionDesc: `
+      <div class="feature"><h3>Ìṣẹ́ Rọrùn, Èrè Tó Po</h3><p>Bá àwọn ọmọ orílẹ̀-èdè mìíràn sọ̀rọ̀, lo awọn sósíálì mídia rẹ, ní àwọn ọ̀rẹ́ tuntun — tí o sì maa gba owó.</p><img src="/assets/s.jpg" alt="Ìṣẹ́ lórí ayélujára tó rọrùn"></div>
+      <div class="feature"><h3>Fifọ Owo Ojoojúmọ́ Laisi Idaduro</h3><p>Fọwọ́sowọ́pò ₦20k, gba owó rẹ̀. Ko sí ọjọ́ títẹ̀ jáde. Kò dá, owó lẹ́ni.</p><img src="/assets/daily.jpg" alt="Fifọ owó lásán"></div>
+      <div class="feature"><h3>Ọ̀nà Púpọ̀ Láti Ní Èrè</h3><p>Látinú báyìí, àtẹ́kọ̀sílẹ̀, NFT àti irinṣẹ́ AI — ṣàyẹ̀wò kí o sì ní èrè.</p><img src="/assets/cta.jpg" alt="Ọ̀pọ̀ ọna èrè"></div>
+    `,
+    pricingText: {
+      sectionTitle: "Àpò Ẹ̀rọ WorkWave",
+      titanPlan: "ETO TITAN – ₦20,000",
+      iconPlan: "ETO ICON – ₦10,000",
+      titanWelcomeBonus: "🎉 Ẹ̀bùn Ìbáṣepọ̀: ₦20,000",
+      titanAiAutomation: "🤖 Ẹ̀rọ AI Alágbára: ₦5,000",
+      titanDailyBonus: "📅 Ẹ̀bùn Ojoojúmọ́: ₦5,000",
+      titanNftTask: "🧠 Ìṣe NFT Mint: ₦2,000",
+      titanSnapEarn: "📸 Ya Aworan, Gba Owo: ₦3,000",
+      titanGuidelineBonus: "🎓 Ẹ̀bùn Ìtọ́sọ́nà: ₦17,000",
+      titanAutoGuideline: "🛠️ Ìtọ́sọ́nà Alágbára: ₦500",
+      iconWelcomeBonus: "🎉 Ẹ̀bùn Ìbáṣepọ̀: ₦9,000",
+      iconAiAutomation: "🤖 Ẹ̀rọ AI Alágbára: ₦1,000",
+      iconDailyBonus: "📅 Ẹ̀bùn Ojoojúmọ́: ₦1,000",
+      iconNftTask: "🧠 Ìṣe NFT Mint: ₦1,000",
+      iconSnapEarn: "📸 Ya Aworan, Gba Owo: ₦2,000",
+      iconGuidelineBonus: "🎓 Ẹ̀bùn Ìtọ́sọ́nà: ₦9,000",
+      iconAutoGuideline: "🛠️ Ìtọ́sọ́nà Alágbára: ₦100",
+      dailyEarningTitan: "Èrè ₦15,000 Ojoojúmọ́",
+      dailyEarningIcon: "Èrè ₦5,000 Ojoojúmọ́",
+      registerButton: "Forúkọsílẹ̀ Bayi"
+    }
+  }
+};
   </script>
 
 </body>
